@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block conteudo %}
-<h1> Listagem de Tarefas</h1>
+<h1> Lista de perguntas</h1>
 <h2>{{ nome_tarefa }}</h2>
 {% for tarefa in tarefas %}
 <div class="card mb-3">
@@ -12,8 +12,8 @@
         <h5 class="card-title"> {{tarefa.titulo}}</h5>
         <p class="text">{{tarefa.descricao}}</p>
         <hr>
-        <a href="{% url 'editar_tarefa' tarefa.id %}"> Alterar Tarefa</a>
-        <a href="{% url 'remover_tarefa' tarefa.id %}"> Remover Tarefa</a>
+        <a href="{% url 'editar_tarefa' tarefa.id %}"> Alterar </a>
+        <a href="{% url 'remover_tarefa' tarefa.id %}"> Remover </a>
     </div>
 </div>
 {% endfor %}
