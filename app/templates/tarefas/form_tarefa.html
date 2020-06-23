@@ -17,16 +17,17 @@
     </div>
     <div class="form-group">
         {{ form_tarefa.data_expiracao.errors }}
-        <label> Data de registro (ex : 01/01/2020):</label>
-    {{ form_tarefa.data_expiracao|addclass:'form-control' }}
-    </div>
+        <label> Data de registro (ex : 01/01/2020)t:</label>
+        {{ form_tarefa.data_expiracao | addclass:'form-control' }}
+   </div>
      <div class="form-group">
          {{ form_tarefa.prioridade.errors }}
         <label> Qual nível de influência desta pergunta em sua vida ?</label>
     {{ form_tarefa.prioridade|addclass:'form-control' }}
     </div>
      <div class="form-group">
-        <input type="submit" value="Salvar">
+         <a href="{{request.META.HTTP_REFERER}}" class="btn btn-primary">Voltar</a>
+        <input type="submit" class="btn btn-primary" value="Salvar">
      </div>
 </form>
 {% endblock conteudo %}
